@@ -1,0 +1,192 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+
+   
+  
+body {
+  background-color: lightgreen;
+  font-family: Arial, Helvetica, sans-serif;
+} 
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+*
+{
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+input
+{
+-webkit-user-select: auto !important;
+-khtml-user-select: auto !important;
+-moz-user-select: auto !important;
+-ms-user-select: auto !important;
+user-select: auto !important;
+}
+
+*{
+-webkit-user-drag: none;
+-moz-user-drag: none;
+-ms-user-drag: none;
+user-drag: none;
+}
+/* Starting from here */
+/* NAV MENU*/
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 480px;
+  margin: auto;
+
+
+}
+#historic-glasgow,
+#tours,
+#settings,
+#contact {
+  padding-top: 100px;
+}
+
+.topnav {
+  margin-bottom: 20px;  
+  overflow: hidden;
+  position: relative;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: 0.5s;
+  min-height: 25px;
+}
+
+.topnav #mymenu {
+  display: none;
+  background-color: #4d714e;
+  padding: 10px;
+}
+
+.topnav a {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 15px;
+}
+
+.topnav a:hover {
+  color: black;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+  min-height: 60px;
+}
+.content {
+  margin: 100px 0px;
+}
+.logo-container {
+
+}
+.logo-app {
+  max-width: 60%;
+  padding: 5px 0px;
+}
+/* IMAGES */
+.content img {
+  max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+/* MAPS */
+.maps iframe,
+iframe.maps {
+    max-width: 100%;
+}
+/* Setting page */
+.content-settings {
+    display: table;
+    margin: 0 auto;
+}
+.content-settings ul {
+    padding: 0px;
+}
+.content-settings li {
+    list-style: none;
+    padding: 10px 0px;
+}
